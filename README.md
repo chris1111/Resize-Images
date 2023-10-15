@@ -1,6 +1,8 @@
 # Build-256-Icons
 Tools to Create Images 256Px High Quality for using with [OpenCanopy Generator](https://github.com/chris1111/OpenCanopy-Generator)
+- Credit Apple: Image Processing System ([sips](https://ss64.com/osx/sips.html))
 
+Useful tools because if you are like me I create my icons in 512Px
 
 ### Follow every steps in the Video ⬇︎ Clic to the Video Image
 
