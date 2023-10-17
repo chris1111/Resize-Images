@@ -1,6 +1,6 @@
 # Resize Images
 Tool to resize your images to any dimension High Quality for using with [OpenCanopy Generator](https://github.com/chris1111/OpenCanopy-Generator)
-- PNG, JPEG, TIFF images are accept.
+- PNG, JPEG, TIFF, ICNS, HEIC images are accept.
 
 ### Useful tool because if you are like me I create my icons in 512Px then we have a lot of Icon to resize.
 - Credit Apple: Image Processing System ([sips](https://ss64.com/osx/sips.html))
