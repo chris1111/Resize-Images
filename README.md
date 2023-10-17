@@ -7,8 +7,7 @@ Tool to resize your images to any dimension High Quality for using with [OpenCan
 
 - [Main script](https://github.com/chris1111/Resize-Images/blob/Master/Sources/script)
 
-
-Download ➤ [ResizeImages.zip](https://github.com/chris1111/Resize-Images.zip/raw/Master/)
+Download ➤ [ResizeImages](https://github.com/chris1111/Resize-Images/raw/Master/Resize%20Images.zip)
 
 ### Follow every steps in the Video ⬇︎ Clic to the Video Image
 
