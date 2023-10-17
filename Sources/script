@@ -67,7 +67,7 @@ for file in "${TempDir}"/*;
 do
 
 
-sips --resampleHeightWidthMax $dialogText -s dpiWidth 144 -s dpiHeight 144 "${TempDir}"/${file##*/} --out "$Output"
+sips -z $dialogText $dialogText -s dpiWidth 144 -s dpiHeight 144 "${TempDir}"/${file##*/} --out "$Output"
 
 done
 
