@@ -9,9 +9,7 @@ Tool to resize your images to any dimension High Quality for using with [OpenCan
 
 Download ➤ [ResizeImages](https://github.com/chris1111/Resize-Images/raw/Master/Resize%20Images.zip)
 
-<img src="Pics/Screenshot 1.png" alt="Github Project" style="width:50%;"> 
-
-<img src="Pics/Screenshot 2.png" alt="Github Project" style="width:50%;"> 
+<img src="Pics/Screenshot 1.png" alt="Github Project" style="width:50%;"><img src="Pics/Screenshot 2.png" alt="Github Project" style="width:50%;"> 
 
 ### Follow every steps in the Video ⬇︎ Clic to the Video Image
 
