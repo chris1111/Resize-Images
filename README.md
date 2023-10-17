@@ -15,5 +15,5 @@ Download ➤ [ResizeImages](https://github.com/chris1111/Resize-Images/raw/Maste
 
 ### Follow every steps in the Video ⬇︎ Clic to the Video Image
 
-[![Modular Image Creation](https://user-images.githubusercontent.com/6248794/218287389-96444e32-0bf1-4886-9632-ccd2e1f3614d.png)]https://vimeo.com/875310967?share=copy#t=0)
+[![Modular Image Creation](https://user-images.githubusercontent.com/6248794/218287389-96444e32-0bf1-4886-9632-ccd2e1f3614d.png)](https://vimeo.com/875310967?share=copy#t=0)
 
