@@ -1,6 +1,5 @@
 #!/bin/sh
-
-# Copyright (c) 2023 chris1111 All rights reserved.
+# Copyright (c) 2023 chris1111 All rights reserved.
 # Credit: Apple Image Processing System (sips)
 # Permission to use, copy, modify, and/or distribute this software for any
 # purpose with or without fee is hereby granted, provided that the above
@@ -13,40 +12,73 @@
 # ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 # OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 # Vars
-Output="$HOME/Desktop/Build_256"
+Output="$HOME/Desktop/Resize_Images"
+TempDir="/Private/tmp/Resize"
+
+    echo "Welcome Resize Images
+-----------------------
+---------------------------------------------------------------
+Drop your PNG images to resize them, only PNG, JPEG, TIFF images are accept.
+An unlimited number of images can be dropped.
+The images will be resized to the size you have chosen of High Quality.
+Output folder ➤ $Output
+---------------------------------------------------------------"
+
+# Set Droping directory and file
+for files in "$@" ;do
+
+if [ "/Private/tmp/Install" ]; then
+	rm -rf "${TempDir}"
+fi
+
+mkdir -p "${TempDir}"
+Sleep 1
+
+cp -R "$@" "${TempDir}"
+
+read -r -d '' applescriptCode <<'EOF'
+   set dialogText to text returned of (display dialog "
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+⬇︎ Exemple size:
+***************
+16
+32
+64
+1282565121024
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Choose the size you want for your images.
+Type your choice in the dialog box.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -" default answer "" with icon 2)
+   return dialogText
+EOF
+
+dialogText=$(osascript -e "$applescriptCode");
 
 osascript <<EOD
-  tell application "Build 256 Icons"
+  tell application "Resize Images"
       activate
   end tell
 EOD
-
-for var in "$@"
-do
-
-    echo "Resizing $var"
-    basename=$(echo "$var" | cut -f 1 -d '.')
 
 mkdir -p $Output
 
-sips --resampleHeightWidthMax 256 -s dpiWidth 144 -s dpiHeight 144 "$var" --out "$Output" &> /dev/null
+for file in "${TempDir}"/*; 
+do
+
+
+sips --resampleHeightWidthMax $dialogText -s dpiWidth 144 -s dpiHeight 144 "${TempDir}"/${file##*/} --out "$Output"
+
 done
 
-if [ ! $# -eq "0" ]; then
-osascript <<EOD
-  tell application "Build 256 Icons"
-      activate
-  end tell
-EOD
-
-    echo "Done processing $# images ➤ $Output"
-else
-    echo "Welcome Build 256 Icons
------------------------
+echo "
 ---------------------------------------------------------------
-Drop your PNG images to resize them, only PNG images are accept.
-An unlimited number of images can be dropped.
-The images will be resize at 256Px High Quality for using with OpenCanopy Generator.
-Output folder ➤ $Output
+Resizing images at $dialogText (Px) ➤ $Output
 ---------------------------------------------------------------"
-fi
+open -R $Output
+Sleep 2
+exit 0
+done
+
+
+
