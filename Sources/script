@@ -18,7 +18,7 @@ TempDir="/Private/tmp/Resize"
     echo "Welcome Resize Images
 -----------------------
 ---------------------------------------------------------------
-Drop your PNG images to resize them, only PNG, JPEG, TIFF images are accept.
+Drop your images to resize them, only PNG, JPEG, TIFF images are accept.
 An unlimited number of images can be dropped.
 The images will be resized to the size you have chosen of High Quality.
 Output folder ➤ $Output
