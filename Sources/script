@@ -1,5 +1,6 @@
 #!/bin/sh
-# Copyright (c) 2023 chris1111 All rights reserved.
+
+# Copyright (c) 2023 chris1111 All rights reserved.
 # Credit: Apple Image Processing System (sips)
 # Permission to use, copy, modify, and/or distribute this software for any
 # purpose with or without fee is hereby granted, provided that the above
@@ -27,7 +28,7 @@ Output folder ➤ $Output
 # Set Droping directory and file
 for files in "$@" ;do
 
-if [ "/Private/tmp/Install" ]; then
+if [ "/Private/tmp/Resize" ]; then
 	rm -rf "${TempDir}"
 fi
 
@@ -44,7 +45,10 @@ read -r -d '' applescriptCode <<'EOF'
 16
 32
 64
-1282565121024
+128
+256
+512
+1024
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 Choose the size you want for your images.
